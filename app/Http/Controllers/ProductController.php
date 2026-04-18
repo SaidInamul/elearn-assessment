@@ -63,13 +63,6 @@ class ProductController extends Controller
         }
     }
 
-    public function edit(Product $product)
-    {
-        return Inertia::render('Products/Edit', [
-            'product' => new ProductResource($product)
-        ]);
-    }
-
     public function update(UpdateProductRequest $request, Product $product): RedirectResponse
     {
         try {

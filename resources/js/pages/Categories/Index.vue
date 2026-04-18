@@ -132,7 +132,9 @@ onMounted(() => {
                             </template>
                             <template v-else>
                                 <tr v-if="filteredAndSortedCategories.length === 0">
-                                    <td colspan="4" class="px-6 py-8 text-center text-muted-foreground">No categories found matching your criteria.</td>
+                                    <td colspan="4" class="px-6 py-8 text-center text-muted-foreground">
+                                        No categories found matching your criteria.
+                                    </td>
                                 </tr>
                                 <tr v-for="(category, index) in paginatedCategories" :key="category.id" class="transition-colors hover:bg-muted/50">
                                     <td class="px-6 py-4 text-muted-foreground">
@@ -147,7 +149,7 @@ onMounted(() => {
                                     <td class="px-6 py-4 text-right">
                                         <button
                                             @click="openUpdateModal(category)"
-                                            class="text-sm font-medium text-primary transition-colors hover:text-primary/80 hover:underline"
+                                            class="hover:text-primary/80 text-sm font-medium text-primary transition-colors hover:underline"
                                         >
                                             Update
                                         </button>
@@ -188,10 +190,6 @@ onMounted(() => {
             </div>
         </div>
 
-        <UpdateCategoryModal
-            v-model:isOpen="isUpdateModalOpen"
-            :category="selectedCategory"
-            @success="handleUpdateSuccess"
-        />
+        <UpdateCategoryModal v-model:isOpen="isUpdateModalOpen" :category="selectedCategory" @success="handleUpdateSuccess" />
     </AppLayout>
 </template>
