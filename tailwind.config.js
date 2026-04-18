@@ -31,7 +31,7 @@ export default {
                     foreground: 'hsl(var(--popover-foreground))',
                 },
                 primary: {
-                    DEFAULT: 'hsl(var(--primary))',
+                    DEFAULT: 'oklch(var(--primary))',
                     foreground: 'hsl(var(--primary-foreground))',
                 },
                 secondary: {
@@ -43,7 +43,7 @@ export default {
                     foreground: 'hsl(var(--muted-foreground))',
                 },
                 accent: {
-                    DEFAULT: 'hsl(var(--accent))',
+                    DEFAULT: 'oklch(var(--accent))',
                     foreground: 'hsl(var(--accent-foreground))',
                 },
                 destructive: {
@@ -52,7 +52,7 @@ export default {
                 },
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',
-                ring: 'hsl(var(--ring))',
+                ring: 'oklch(var(--ring))',
                 chart: {
                     1: 'hsl(var(--chart-1))',
                     2: 'hsl(var(--chart-2))',
@@ -65,8 +65,9 @@ export default {
                     foreground: 'hsl(var(--sidebar-foreground))',
                     primary: 'hsl(var(--sidebar-primary))',
                     'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-                    accent: 'hsl(var(--sidebar-accent))',
+                    accent: 'oklch(var(--sidebar-accent))',
                     'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+                    active: 'oklch(var(--sidebar-active))',
                     border: 'hsl(var(--sidebar-border))',
                     ring: 'hsl(var(--sidebar-ring))',
                 },

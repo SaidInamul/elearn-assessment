@@ -34,7 +34,13 @@ const currentPath = window.location.pathname;
                         v-for="item in sidebarNavItems"
                         :key="item.href"
                         variant="ghost"
-                        :class="['w-full justify-start', { 'bg-muted': currentPath === item.href }]"
+                        :class="[
+                            'w-full justify-start',
+                            {
+                                'bg-sidebar-active hover:bg-sidebar-active/80 text-sidebar-accent-foreground hover:text-sidebar-accent-foreground':
+                                    currentPath === item.href,
+                            },
+                        ]"
                         as-child
                     >
                         <Link :href="item.href">
